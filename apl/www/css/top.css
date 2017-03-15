@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+/*
+	ページ全体設定
+ */
+
+*{
+	font-size : 18px ;
+}
+
+html{
+	overflow : hidden ;
+}
+
+body{
+	overflow : auto ;
+}
+
+html,body{
+	height : 100% ;
+	width : 100% ;
+	margin : 0 auto ;
+	padding : 0 ;
+	background-color : #eee ;
+}
+
+.container{
+	height:100%;
+	width : 100% ;
+}
+
+ul{
+	list-style : none ;
+	padding : 0 ;
+	margin : 0 ;
+}
+
+/*
+	上部タイトル・メニュー設定
+ */
+
+header{
+	text-align : left ;
+	background-color : #5ae628 ;
+	color : white ;
+	position : fixed ;
+	top : 0 ;
+	width : 100% ;
+	height : 40px ;
+	line-height : 40px ;
+	margin : 0 ;
+	padding : 0 ;
+}
+
+#PageTitle{
+	margin : 0 ;
+	padding-left : 10px ;
+	float : left ;
+}
+
+#IndexMenu{
+	float : right ;
+}
+
+#IndexMenu ul{
+	width : 75px ;
+}
+
+#IndexMenu li{
+	float : left ;
+	width : 25px ;
+	height : 40px ;
+	text-align : center ;
+	display : flex ;
+
+}
+
+#IndexMenu li img{
+	max-width : 100% ;
+	max-height : 100% ;
+}
+
+
+
+/*
+	タスク・リスト
+ */
+
+main{
+	margin-top : 40px;
+}
+
+.taskList{
+	height : 40px ;
+	padding-top : 5px ;
+	padding-bottom : 5px ;
+	padding-left : 5px ;
+	background-color : white ;
+	border-bottom : 1px solid #ccc ;
+}
+
+.taskIcon{
+	width : 40px ;
+	height : 40px ;
+	background-color : black ;
+	border-radius : 50% ;
+	float : left ;
+}
+
+.taskIcon img {
+	width : 100% ;
+	max-height : 100% ;
+}
+
+.taskContent{
+	float : left ;
+	width : calc(100% - 45px ) ;
+	padding-left : 5px ;
+}
+
+.taskTitle{
+	font-size : 14px ;
+}
+
+.taskDescription{
+	font-size : 10px ;
+	color : #666 ;
+}
+

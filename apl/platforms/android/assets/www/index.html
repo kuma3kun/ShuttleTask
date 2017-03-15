@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/top.css">
+<script type="text/javascript">
+	taskNo = 0;
+	var addTask = document.getElementById('addTask');
+
+	function taskInputer() {
+		var taskInputer = document.getElementById('taskInputer');
+		taskInputer.classList.toggle("off");
+	};
+
+	function taskResister() {
+		var taskInputer = document.getElementById('taskInputer');
+		var title = TaskForm.title.value ;
+		var maintext = TaskForm.maintext.value ;
+
+		//フォーム非表示
+		taskInputer.classList.toggle("off");
+
+		taskCreater(title,maintext);
+
+		Form.reset("Form");
+	};
+
+	function taskCreater(title,maintext) {
+		var taskContainer = document.getElementById('taskContainer');
+		var newTask = document.createDocumentFragment();
+		var newTaskBody = document.createElement("li");
+		var newTitle = document.createElement("div");
+		var newOverview = document.createElement("div");
+
+		taskNo++;
+
+		//タスクボディ
+		newTaskBody.classList.add('taskBody');
+
+		//タスクタイトル
+		newTitle.classList.add('taskTitle');
+		newTitle.appendChild(document.createTextNode(title));
+
+		//タスク概要
+		newOverview.classList.add('taskOverview');
+		newOverview.appendChild(document.createTextNode(maintext));
+
+		//タスク結合
+		newTaskBody.appendChild(newTitle);
+		newTaskBody.appendChild(newOverview);
+		taskContainer.appendChild(newTaskBody);
+
+		taskContainer.appendChild(newTask);
+	};
+</script>
+<title>ShuttleTask</title>
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<div id="underUI">
+				<button id="addTask" onClick="taskInputer()">＋</button>
+			</div>
+		</nav>
+		<header>
+			<h1>taskApp</h1>
+		</header>
+		<main>
+		<ul id="taskContainer">
+		</ul>
+		</main>
+		<div id="taskInputer" class="off">
+			<form id="Form" name="TaskForm">
+				<div>
+					<input type="text" name="title" />
+				</div>
+				<div>
+					<textarea name="maintext"></textarea>
+				</div>
+			</form>
+			<div>
+				<button id="taskResister" onClick="taskResister()">登録</button>
+			</div>
+		</div>
+	</div>
+	<!--
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	-->
+</body>
+</html>

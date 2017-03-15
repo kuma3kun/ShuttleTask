@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+/*
+	ページ全体設定
+ */
+
+*{
+	font-size : 18px ;
+}
+
+html{
+	overflow : hidden ;
+}
+
+body{
+	overflow : auto ;
+}
+
+html,body{
+	height : 100% ;
+	width : 100% ;
+	margin : 0 auto ;
+	padding : 0 ;
+	background-color : #9CA7E2 ;
+}
+
+.container{
+	height:100%;
+	width : 100% ;
+}
+
+ul{
+	list-style : none ;
+	padding : 0 ;
+	margin : 0 ;
+}
+
+/*
+	上部タイトル・メニュー設定
+ */
+
+header{
+	text-align : left ;
+	background-color : #5ae628 ;
+	color : white ;
+	position : fixed ;
+	top : 0 ;
+	width : 100% ;
+	height : 40px ;
+	line-height : 40px ;
+	margin : 0 ;
+	padding : 0 ;
+	z-index : 100 ;
+}
+
+#PageTitle{
+	margin : 0 ;
+	padding-left : 10px ;
+	float : left ;
+}
+
+#IndexMenu{
+	float : right ;
+}
+
+#IndexMenu ul{
+	width : 75px ;
+}
+
+#IndexMenu li{
+	float : left ;
+	width : 25px ;
+	height : 40px ;
+	text-align : center ;
+	display : flex ;
+
+}
+
+#IndexMenu li img{
+	max-width : 100% ;
+	max-height : 100% ;
+}
+
+
+
+/*
+	タスク・リスト
+ */
+
+main{
+	margin-top : 40px;
+}
+
+#TookList li{
+	clear : both ;
+}
+
+.tookIcon{
+	width : 25px ;
+	height : 25px ;
+	background-color : black ;
+	border-radius : 50% ;
+}
+
+.systemMessage .tookIcon{
+	float : left ;
+	margin-left : 5px ;
+	margin-top : 5px ;
+}
+
+.tookIcon img {
+	width : 100% ;
+	max-height : 100% ;
+}
+
+.tookContent{
+	margin-bottom : -20px ;
+	line-height : 14px ;
+}
+
+.systemMessage .tookContent{
+	float : left ;
+	max-width : calc(100% - 45px ) ;]
+	padding-left : 5px ;
+	margin-left : 5px ;
+}
+
+.userMessage .tookContent{
+	float : right ;
+	max-width : calc(100% - 20px );
+	margin-right : 10px ;
+}
+
+.tookContent:after{
+	content:".";
+	font-size : 0 ;
+}
+
+.tookUser{
+	font-size : 8px ;
+	color : white ;
+}
+
+.tookBody{
+	font-size : 12px ;
+	padding : 5px ;
+	border-radius : 5px ;
+	position : relative ;
+}
+
+.systemMessage .tookBody{
+	color : black ;
+	background-color : white ;
+}
+
+.userMessage .tookBody{
+	color : black ;
+	background-color : #7cfc00 ;
+}
+
+.tookBody:after{
+	border:10px solid transparent;
+	top:5px;
+	content:"";
+	display:block;
+	position:absolute;
+	width:0px;
+}
+
+.systemMessage .tookBody:after{
+	left:-15px;
+	border-right: 5px solid white;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+
+.userMessage .tookBody:after{
+	right:-15px;
+	border-left: 5px solid #7cfc00;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+
+
+/*
+	スタンプ入力基本
+ */
+
+.stampInterface{
+	position : fixed ;
+	bottom : 0 ;
+	width : 100% ;
+	height : 160px ;
+	background-color : white ;
+	border-top : 1px solid black ;
+	overflow : scroll ;
+	display : none ;
+}
+
+
+
+/*
+	スタンプ入力（2種）
+ */
+
+.stampTwo{
+	height : 100% ;
+	display : flex ;
+	flex-direction: row ;
+	justify-content: space-around ;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.stampTwo li{
+	height : 50px ;
+	width : 50px ;
+	box-sizing : border-box ;
+	border : 1px solid black ;
+	text-align : center ;
+	line-height : 70px ;
+}
+
+.stampTwo img{
+	max-width : 50px ;
+	max-height : 50px ;
+}
+
+
+
+/*
+	テキスト入力
+ */
+
+.textInterface{
+	position : fixed ;
+	bottom : 0 ;
+	background-color : #ccc ;
+	min-height : 30px ;
+	width : 100% ;
+	display : none ;
+}
+
+.textInterface .textStyle{
+	position : absolute ;
+	right : 20px ;
+	width : calc(100% - 40px) ;
+	margin-left : 10px ;
+}
+
+.textInterface textarea{
+	width : 100% ;
+	font-size : 12px ;
+}
+
+.textInterface .buttonStyle button{
+	position : absolute ;
+	right : 0 ;
+	bottom : 0 ;
+	height: 30px ;
+	width : 30px ;
+	text-align : center ;
+}
+
+
