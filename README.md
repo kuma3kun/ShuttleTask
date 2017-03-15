@@ -1,1 +1,3 @@
 # ShuttleTask
+
+Cordovaでのお試しタスクアプリ
